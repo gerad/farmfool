@@ -1,0 +1,18 @@
+<h1>Listing markets</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% for market in @markets %>
+  <tr>
+    <td><%= link_to 'Show', market %></td>
+    <td><%= link_to 'Edit', edit_market_path(market) %></td>
+    <td><%= link_to 'Destroy', market, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New market', new_market_path %>
