@@ -9,27 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081004171918) do
-
-  create_table "bdrb_job_queues", :force => true do |t|
-    t.binary   "args"
-    t.string   "worker_name"
-    t.string   "worker_method"
-    t.string   "job_key"
-    t.integer  "taken"
-    t.integer  "finished"
-    t.integer  "timeout"
-    t.integer  "priority"
-    t.datetime "submitted_at"
-    t.datetime "started_at"
-    t.datetime "finished_at"
-    t.datetime "archived_at"
-    t.datetime "scheduled_at"
-    t.string   "tag"
-    t.string   "submitter_info"
-    t.string   "runner_info"
-    t.string   "worker_key"
-  end
+ActiveRecord::Schema.define(:version => 20081005182850) do
 
   create_table "markets", :force => true do |t|
     t.string   "name",                    :null => false
@@ -39,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20081004171918) do
     t.string   "zip",        :limit => 5
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "street2"
   end
 
 end
